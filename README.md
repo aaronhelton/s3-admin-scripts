@@ -10,7 +10,7 @@ Usage: nightly-snapshot.sh -c < s3 credentials file > -v < volume id >
 Example: nightly-snapshot.sh -c ~/.secret/.credentials -v vol-nnnnnnnn
 
 
-pg-backup-to-s3.sh is more complicated.  It makes PostgreSQL database backups and pushes them to an S3 bucket.  It can be scheduled with cron as well.  You need two sets of credentials with this script: AWS credentials with permission to add objects to the specified bucket and the PostgreSQL database username and password for the database you want to backup.
+pg-backup-to-s3.sh is more complicated.  It makes PostgreSQL database backups and pushes them to an S3 bucket.  It can be scheduled with cron as well.  You need two sets of credentials with this script: AWS credentials with permission to add objects to the specified bucket and the PostgreSQL database username and password for the database you want to backup.  The inspiration for this script came from https://github.com/collegeplus/s3-shell-backups although mine probably doesn't resemble the original much anymore.
 
 Usage: pg-backup-to-s3.sh -c < s3 credentials file > -b < bucket > -s < source dir > -d < dest dir > -n < db name > -p < pgpass file >
 
